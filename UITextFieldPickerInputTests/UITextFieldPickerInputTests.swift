@@ -70,6 +70,18 @@ class UITextFieldPickerInputTests: XCTestCase {
         XCTAssertTrue(textField.pickerInputView?.pickerData.keys.count == 2)
     }
     
+    func testUpdateComponentData() {
+        let originalVal = [0: ["first", "second", "third"]]
+        let updatedVal = [0: ["first", "section"]]
+        textField.loadPicker(data: originalVal)
+        XCTAssertNotNil(textField.pickerInputView?.pickerData)
+        XCTAssertTrue(textField.pickerInputView?.pickerData.first?.value.count == 3)
+        
+        textField.updatePickerInput(with: updatedVal)
+        XCTAssertNotNil(textField.pickerInputView?.pickerData)
+        XCTAssertTrue(textField.pickerInputView?.pickerData.first?.value.count == 2)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
