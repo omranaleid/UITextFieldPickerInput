@@ -40,6 +40,7 @@ extension Cat: Selectable {
 or for example simple data type as String:
 ```
 extension String: Selectable {
+
     var selectableText: String {
         return self
     }
@@ -62,16 +63,11 @@ let data: [Int: [Selectable]] = [
 ```
 textField.loadPicker(data: data, onSelect: { [weak self] selected in
     var displayedText = ""
+    
     if let selectedCat = selected[0] as? Cat {
-        print(selectedCat.extraInfo)
-        print(selectedCat.id)
-        print(selectedCat.name)
         displayedText = "Cat: \(selectedCat.name)"
     }
     if let selectedDog = selected[1] as? Dog {
-        print(selectedDog.extraInfo)
-        print(selectedDog.id)
-        print(selectedDog.name)
         displayedText.append(" Dog: \(selectedDog.name)")
     }
               
