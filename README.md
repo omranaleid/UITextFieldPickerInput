@@ -1,6 +1,9 @@
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/omranaleid/UITextFieldPickerInput/blob/master/LICENSE)
+
 # UITextFieldPickerInput
 This is a small library to help displaying picker as input view for UITextField with some editable and managable content 
 
+![](PickerExample.gif)
 # Installation
 The lib is available through [CocoaPods](https://cocoapods.org) CocoaPods can be installed using [Ruby gems](https://rubygems.org):
 
