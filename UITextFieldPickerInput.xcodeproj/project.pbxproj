@@ -24,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		91544F71248D70B20098CCCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91857F672489C5E6005D76D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91F3DEBA248AA5F90003C6DF;
+			remoteInfo = UITextFieldPickerInputExamples;
+		};
 		91F3DEDB248AA6D10003C6DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91857F672489C5E6005D76D2 /* Project object */;
@@ -199,6 +206,7 @@
 			);
 			dependencies = (
 				91F3DEDC248AA6D10003C6DF /* PBXTargetDependency */,
+				91544F72248D70B20098CCCC /* PBXTargetDependency */,
 			);
 			name = UITextFieldPickerInputTests;
 			productName = UITextFieldPickerInputTests;
@@ -223,6 +231,7 @@
 					};
 					91F3DED4248AA6D10003C6DF = {
 						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 91F3DEBA248AA5F90003C6DF;
 					};
 				};
 			};
@@ -307,6 +316,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		91544F72248D70B20098CCCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91F3DEBA248AA5F90003C6DF /* UITextFieldPickerInputExamples */;
+			targetProxy = 91544F71248D70B20098CCCC /* PBXContainerItemProxy */;
+		};
 		91F3DEDC248AA6D10003C6DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91857F6F2489C5E6005D76D2 /* UITextFieldPickerInput */;
@@ -548,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PDJR4H36G;
 				INFOPLIST_FILE = UITextFieldPickerInputTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,6 +573,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextFieldPickerInputExamples.app/UITextFieldPickerInputExamples";
 			};
 			name = Debug;
 		};
@@ -565,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PDJR4H36G;
 				INFOPLIST_FILE = UITextFieldPickerInputTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,6 +592,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextFieldPickerInputExamples.app/UITextFieldPickerInputExamples";
 			};
 			name = Release;
 		};
