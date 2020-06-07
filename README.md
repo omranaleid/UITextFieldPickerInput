@@ -1,8 +1,4 @@
-[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/omranaleid/UITextFieldPickerInput/blob/master/LICENSE)
-
-[![Build Status](https://travis-ci.org/omranaleid/UITextFieldPickerInput.svg?branch=master)](https://travis-ci.org/omranaleid/UITextFieldPickerInput)
-
-[![codecov](https://codecov.io/gh/omranaleid/UITextFieldPickerInput/branch/master/graph/badge.svg)](https://codecov.io/gh/omranaleid/UITextFieldPickerInput)
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/omranaleid/UITextFieldPickerInput/blob/master/LICENSE) [![Build Status](https://travis-ci.org/omranaleid/UITextFieldPickerInput.svg?branch=master)](https://travis-ci.org/omranaleid/UITextFieldPickerInput) [![codecov](https://codecov.io/gh/omranaleid/UITextFieldPickerInput/branch/master/graph/badge.svg)](https://codecov.io/gh/omranaleid/UITextFieldPickerInput)
 
 # UITextFieldPickerInput
 This is a small library to help displaying picker as input view for UITextField with some editable and managable content 
