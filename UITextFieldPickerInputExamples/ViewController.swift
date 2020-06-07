@@ -57,19 +57,19 @@ class ViewController: UIViewController {
             print(selectedDone)
         }
         
-        // 4- you can update the default settings
-        var settings: PickerInputSettings = PickerInputSettings()
-        settings.cancelButtonTitle = "remove"
-
-        textField.updatePickerInput(with: settings)
-        
-        // 5- trigger the textFiled becomeFirstResponder to show the picker
-        textField.becomeFirstResponder()
-        
-        // 6- try to update the picker data
-        textField.updatePickerInput(with: [Cat(id: 1, name: "updated cat 1", extraInfo: "foo"),
-                                           Cat(id: 2, name: "updated cat 2", extraInfo: "foo")],
-                                    component: 0)
+//        // 4- you can update the default settings
+//        var settings: PickerInputSettings = PickerInputSettings()
+//        settings.cancelButtonTitle = "remove"
+//
+//        textField.updatePickerInput(with: settings)
+//
+//        // 5- trigger the textFiled becomeFirstResponder to show the picker
+//        textField.becomeFirstResponder()
+//
+//        // 6- try to update the picker data
+//        textField.updatePickerInput(with: [Cat(id: 1, name: "updated cat 1", extraInfo: "foo"),
+//                                           Cat(id: 2, name: "updated cat 2", extraInfo: "foo")],
+//                                    component: 0)
     }
 }
 
