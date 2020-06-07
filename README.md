@@ -49,7 +49,7 @@ extension String: Selectable {
     }
 }
 ```
-### 2- Defin your data that you want to select from
+### 2- Define your data that you want to select from
 the key will be the component number and the value will be array of objects that you want to select from.
 ```
 let data: [Int: [Selectable]] = [
@@ -58,7 +58,7 @@ let data: [Int: [Selectable]] = [
  ]
 ```
 
-### 3- laod the Picker inside the UITextfiled and get the selected values for each component
+### 3- load the Picker inside the UITextfiled and get the selected values for each component
 ```
 textField.loadPicker(data: data, onSelect: { [weak self] selected in
     var displayedText = ""
