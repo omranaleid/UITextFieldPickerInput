@@ -7,17 +7,30 @@
 		<key>UITextFieldPickerInput.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>UITextFieldPickerInputExamples.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>UITextFieldPickerInputTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>91857F6F2489C5E6005D76D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91F3DED4248AA6D10003C6DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
