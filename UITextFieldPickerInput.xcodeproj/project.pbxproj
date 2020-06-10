@@ -15,6 +15,7 @@
 		918BD88D249131C300D28CF7 /* PickerInputUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BD88C249131C300D28CF7 /* PickerInputUIHelper.swift */; };
 		918BD88F249139B600D28CF7 /* UITextFieldPickerInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91857F702489C5E6005D76D2 /* UITextFieldPickerInput.framework */; };
 		918BD890249139B600D28CF7 /* UITextFieldPickerInput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91857F702489C5E6005D76D2 /* UITextFieldPickerInput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		918BD895249158B300D28CF7 /* PickerInputUIHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BD894249158B300D28CF7 /* PickerInputUIHelperTests.swift */; };
 		91F3DEBE248AA5F90003C6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEBD248AA5F90003C6DF /* AppDelegate.swift */; };
 		91F3DEC0248AA5F90003C6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEBF248AA5F90003C6DF /* SceneDelegate.swift */; };
 		91F3DEC2248AA5F90003C6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEC1248AA5F90003C6DF /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		91857F7D2489C664005D76D2 /* PickerInputSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputSettings.swift; sourceTree = "<group>"; };
 		91857F7E2489C664005D76D2 /* PickerInputConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputConstants.swift; sourceTree = "<group>"; };
 		918BD88C249131C300D28CF7 /* PickerInputUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputUIHelper.swift; sourceTree = "<group>"; };
+		918BD894249158B300D28CF7 /* PickerInputUIHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputUIHelperTests.swift; sourceTree = "<group>"; };
 		91F3DEBB248AA5F90003C6DF /* UITextFieldPickerInputExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextFieldPickerInputExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3DEBD248AA5F90003C6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3DEBF248AA5F90003C6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				91F3DED7248AA6D10003C6DF /* UITextFieldPickerInputTests.swift */,
 				91F3DED9248AA6D10003C6DF /* Info.plist */,
+				918BD894249158B300D28CF7 /* PickerInputUIHelperTests.swift */,
 			);
 			path = UITextFieldPickerInputTests;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918BD895249158B300D28CF7 /* PickerInputUIHelperTests.swift in Sources */,
 				91F3DED8248AA6D10003C6DF /* UITextFieldPickerInputTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
