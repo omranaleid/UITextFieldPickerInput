@@ -22,12 +22,15 @@ extension UITextField {
     }
 
     public func loadPicker(data: [Int: [Selectable]],
-                    onSelect: SelectHandler? = nil,
-                    onDone: SelectHandler? = nil) {
-       _ = PickerInputView(pickerData: data,
-                      textField: self,
-                      onSelect: onSelect,
-                      onDone: onDone)
+                           overlayedView: UIView? = nil,
+                           onSelect: SelectHandler? = nil,
+                           onDone: SelectHandler? = nil) {
+        
+        _ = PickerInputView(pickerData: data,
+                            textField: self,
+                            onSelect: onSelect,
+                            onDone: onDone,
+                            overlayedView: overlayedView)
     }
     
     public func updatePickerInput(with settings: PickerInputSettings) {
@@ -43,5 +46,10 @@ extension UITextField {
     public func updatePickerInput(with componentData: [Selectable], component: Int) {
         guard let pickerInput = self.inputView as? PickerInputView else { return }
         pickerInput.updatePickerInput(with: componentData, component: component)
+    }
+    
+    public var pickerInputOverlayView: UIView? {
+        guard let container = self.pickerInputView?.overlayedView else { return nil }
+        return PickerInputUIHelper.overlayView(for: container)
     }
 }

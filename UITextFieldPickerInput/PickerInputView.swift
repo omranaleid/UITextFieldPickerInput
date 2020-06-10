@@ -15,6 +15,13 @@ public class PickerInputView: UIPickerView {
     private(set) var onSelect: SelectHandler?
     private(set) var onDone: SelectHandler?
     private(set) var selectedValue: [Int: Selectable] = [:]
+    private(set) var overlayedView: UIView?
+    
+    private lazy var tapGesture: UITapGestureRecognizer = {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(onPressOverlay))
+        return gesture
+    }()
+    
     public var settings: PickerInputSettings? {
         didSet {
             guard let settings = settings else { return }
@@ -46,7 +53,8 @@ public class PickerInputView: UIPickerView {
     init(pickerData: [Int: [Selectable]],
          textField: UITextField,
          onSelect: SelectHandler? = nil,
-         onDone: SelectHandler? = nil) {
+         onDone: SelectHandler? = nil,
+         overlayedView: UIView? = nil) {
         
         self.textField = textField
         self.pickerData = pickerData
@@ -60,6 +68,7 @@ public class PickerInputView: UIPickerView {
         textField.inputView = self
         textField.inputAccessoryView = toolBar
         setDefultValues()
+        setOverlay(view: overlayedView)
     }
 
     required init?(coder: NSCoder) {
@@ -69,6 +78,12 @@ public class PickerInputView: UIPickerView {
 
 // MARK: Public
 public extension PickerInputView {
+    
+    func setOverlay(view: UIView?) {
+        self.overlayedView = view
+        guard let overlayedView = self.overlayedView else { return }
+        PickerInputUIHelper.addOverlay(overlayedView)
+    }
     
     func updatePickerInput(with settings: PickerInputSettings) {
         self.settings = settings
@@ -84,6 +99,11 @@ public extension PickerInputView {
         pickerData[component] = componentData
         reloadComponent(component)
     }
+    
+    func dismissPicker() {
+        PickerInputUIHelper.removeOverlay(self.overlayedView)
+        textField.resignFirstResponder()
+    }
 }
 
 // MARK: Actions
@@ -91,11 +111,17 @@ private extension PickerInputView {
     
     @objc func done() {
         onDone?(selectedValue)
-        textField.resignFirstResponder()
+        dismissPicker()
     }
     
     @objc func cancel() {
-        textField.resignFirstResponder()
+        dismissPicker()
+    }
+    
+    @objc func onPressOverlay() {
+        if settings?.hideWhenTouchOverlay ?? false {
+            dismissPicker()
+        }
     }
     
     func setDefultValues() {
@@ -131,6 +157,17 @@ private extension PickerInputView {
                 return item.tag == PickerInputConstants.cancelBtnTag.rawValue
             })
         }
+        
+        if let overlayView = self.overlayedView {
+            PickerInputUIHelper.updateOverlayView(for: overlayView, backgroundColor: settings.overlayViewBackgroundColor)
+        }
+        
+        guard let overlayedView = self.overlayedView,
+            let overlayView = PickerInputUIHelper.overlayView(for: overlayedView) else {
+                return
+        }
+        
+        settings.hideWhenTouchOverlay ? overlayView.addGestureRecognizer(self.tapGesture) : overlayView.gestureRecognizers?.removeAll()
     }
     
     func getItem(for tag: Int) -> UIBarButtonItem? {
@@ -157,7 +194,7 @@ extension PickerInputView: UIPickerViewDelegate, UIPickerViewDataSource {
         onSelect?(selectedValue)
         
         if settings?.hideWhenSelect ?? false {
-            textField.resignFirstResponder()
+            dismissPicker()
         }
     }
     

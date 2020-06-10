@@ -20,7 +20,9 @@ public struct PickerInputSettings {
     public var hideCancelButton: Bool = false
     public var isToolBarHidden: Bool = false
     public var hideWhenSelect: Bool = false
-    
+    public var hideWhenTouchOverlay: Bool = false
+    public var overlayViewBackgroundColor: UIColor = UIColor.black.withAlphaComponent(0.6)
+
     public init(cancelButtonTitle: String = "Cancel",
                 doneButtonTitle: String = "Done",
                 toolBarStyle: UIBarStyle = .black,
@@ -30,7 +32,9 @@ public struct PickerInputSettings {
                 hideDoneButton: Bool = false,
                 hideCancelButton: Bool = false,
                 isToolBarHidden: Bool = false,
-                hideWhenSelect: Bool = false) {
+                hideWhenSelect: Bool = false,
+                hideWhenTouchOverlay: Bool = false,
+                overlayViewBackgroundColor: UIColor = UIColor.black.withAlphaComponent(0.6)) {
         
         self.cancelButtonTitle = cancelButtonTitle
         self.doneButtonTitle = doneButtonTitle
@@ -42,5 +46,7 @@ public struct PickerInputSettings {
         self.hideCancelButton = hideCancelButton
         self.isToolBarHidden = isToolBarHidden
         self.hideWhenSelect = hideWhenSelect
+        self.hideWhenTouchOverlay = hideWhenTouchOverlay
+        self.overlayViewBackgroundColor = overlayViewBackgroundColor
     }
 }

@@ -12,6 +12,9 @@
 		91857F802489C664005D76D2 /* PickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91857F7C2489C664005D76D2 /* PickerInputView.swift */; };
 		91857F812489C664005D76D2 /* PickerInputSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91857F7D2489C664005D76D2 /* PickerInputSettings.swift */; };
 		91857F822489C664005D76D2 /* PickerInputConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91857F7E2489C664005D76D2 /* PickerInputConstants.swift */; };
+		918BD88D249131C300D28CF7 /* PickerInputUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BD88C249131C300D28CF7 /* PickerInputUIHelper.swift */; };
+		918BD88F249139B600D28CF7 /* UITextFieldPickerInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91857F702489C5E6005D76D2 /* UITextFieldPickerInput.framework */; };
+		918BD890249139B600D28CF7 /* UITextFieldPickerInput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91857F702489C5E6005D76D2 /* UITextFieldPickerInput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91F3DEBE248AA5F90003C6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEBD248AA5F90003C6DF /* AppDelegate.swift */; };
 		91F3DEC0248AA5F90003C6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEBF248AA5F90003C6DF /* SceneDelegate.swift */; };
 		91F3DEC2248AA5F90003C6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F3DEC1248AA5F90003C6DF /* ViewController.swift */; };
@@ -31,6 +34,13 @@
 			remoteGlobalIDString = 91F3DEBA248AA5F90003C6DF;
 			remoteInfo = UITextFieldPickerInputExamples;
 		};
+		918BD891249139B600D28CF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91857F672489C5E6005D76D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91857F6F2489C5E6005D76D2;
+			remoteInfo = UITextFieldPickerInput;
+		};
 		91F3DEDB248AA6D10003C6DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91857F672489C5E6005D76D2 /* Project object */;
@@ -40,6 +50,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		918BD893249139B600D28CF7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				918BD890249139B600D28CF7 /* UITextFieldPickerInput.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		91857F702489C5E6005D76D2 /* UITextFieldPickerInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextFieldPickerInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91857F732489C5E6005D76D2 /* UITextFieldPickerInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldPickerInput.h; sourceTree = "<group>"; };
@@ -48,6 +72,7 @@
 		91857F7C2489C664005D76D2 /* PickerInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputView.swift; sourceTree = "<group>"; };
 		91857F7D2489C664005D76D2 /* PickerInputSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputSettings.swift; sourceTree = "<group>"; };
 		91857F7E2489C664005D76D2 /* PickerInputConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerInputConstants.swift; sourceTree = "<group>"; };
+		918BD88C249131C300D28CF7 /* PickerInputUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputUIHelper.swift; sourceTree = "<group>"; };
 		91F3DEBB248AA5F90003C6DF /* UITextFieldPickerInputExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextFieldPickerInputExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F3DEBD248AA5F90003C6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F3DEBF248AA5F90003C6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918BD88F249139B600D28CF7 /* UITextFieldPickerInput.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +121,7 @@
 				91F3DEBC248AA5F90003C6DF /* UITextFieldPickerInputExamples */,
 				91F3DED6248AA6D10003C6DF /* UITextFieldPickerInputTests */,
 				91857F712489C5E6005D76D2 /* Products */,
+				918BD88E249139B600D28CF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,8 +144,16 @@
 				91857F7E2489C664005D76D2 /* PickerInputConstants.swift */,
 				91857F732489C5E6005D76D2 /* UITextFieldPickerInput.h */,
 				91857F742489C5E6005D76D2 /* Info.plist */,
+				918BD88C249131C300D28CF7 /* PickerInputUIHelper.swift */,
 			);
 			path = UITextFieldPickerInput;
+			sourceTree = "<group>";
+		};
+		918BD88E249139B600D28CF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		91F3DEBC248AA5F90003C6DF /* UITextFieldPickerInputExamples */ = {
@@ -184,10 +219,12 @@
 				91F3DEB7248AA5F90003C6DF /* Sources */,
 				91F3DEB8248AA5F90003C6DF /* Frameworks */,
 				91F3DEB9248AA5F90003C6DF /* Resources */,
+				918BD893249139B600D28CF7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				918BD892249139B600D28CF7 /* PBXTargetDependency */,
 			);
 			name = UITextFieldPickerInputExamples;
 			productName = UITextFieldPickerInputExamples;
@@ -288,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91857F822489C664005D76D2 /* PickerInputConstants.swift in Sources */,
+				918BD88D249131C300D28CF7 /* PickerInputUIHelper.swift in Sources */,
 				91857F7F2489C664005D76D2 /* PickerInputProtocols.swift in Sources */,
 				91857F802489C664005D76D2 /* PickerInputView.swift in Sources */,
 				91857F812489C664005D76D2 /* PickerInputSettings.swift in Sources */,
@@ -320,6 +358,11 @@
 			isa = PBXTargetDependency;
 			target = 91F3DEBA248AA5F90003C6DF /* UITextFieldPickerInputExamples */;
 			targetProxy = 91544F71248D70B20098CCCC /* PBXContainerItemProxy */;
+		};
+		918BD892249139B600D28CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91857F6F2489C5E6005D76D2 /* UITextFieldPickerInput */;
+			targetProxy = 918BD891249139B600D28CF7 /* PBXContainerItemProxy */;
 		};
 		91F3DEDC248AA6D10003C6DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
