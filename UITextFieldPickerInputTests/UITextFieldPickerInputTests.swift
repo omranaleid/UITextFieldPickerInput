@@ -22,9 +22,11 @@ extension String: Selectable {
 class UITextFieldPickerInputTests: XCTestCase {
 
     var textField: UITextField!
-    
+    var overlayedView: UIView!
+
     override func setUpWithError() throws {
         textField = UITextField()
+        overlayedView = UIView()
     }
 
     override func tearDownWithError() throws {
@@ -82,6 +84,20 @@ class UITextFieldPickerInputTests: XCTestCase {
         XCTAssertTrue(textField.pickerInputView?.pickerData.first?.value.count == 2)
     }
     
+    func testAddOverlay() {
+        XCTAssertNil(textField.pickerInputOverlayView)
+        textField.loadPicker(data: [0: ["first", "second", "third"]], overlayedView: overlayedView)
+        XCTAssertNotNil(textField.pickerInputOverlayView)
+    }
+
+    func testRemoveOverlay() {
+        XCTAssertNil(textField.pickerInputOverlayView)
+        textField.loadPicker(data: [0: ["first", "second", "third"]], overlayedView: overlayedView)
+        XCTAssertNotNil(textField.pickerInputOverlayView)
+        textField.pickerInputView?.dismissPicker()
+        XCTAssertNil(textField.pickerInputOverlayView)
+    }
+
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
