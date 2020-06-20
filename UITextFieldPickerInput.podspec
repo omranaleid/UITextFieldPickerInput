@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "UITextFieldPickerInput"
-  spec.version      = "0.0.1"
-  spec.summary      = "A quick way to display UIPickerView as InpitView for UITextField."
+  spec.version      = "0.1.1"
+  spec.summary      = "A quick way to display UIPickerView as InputView for UITextField."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,11 +25,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
- This is a small library to help displaying picker as input view for UITextField with some editable and managable content.
+ This is a small library to help displaying picker as input view for UITextField with some editable and manageable content.
                    DESC
 
   spec.homepage     = "https://github.com/omranaleid/UITextFieldPickerInput"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  spec.screenshots  = "https://github.com/omranaleid/UITextFieldPickerInput/blob/master/PickerExample.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
