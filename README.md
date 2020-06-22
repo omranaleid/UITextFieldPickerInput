@@ -4,6 +4,7 @@
 This is a small library to help displaying picker as input view for UITextField with some editable and managable content 
 
 ![](PickerExample.gif)
+![](overlay.gif)
 # Installation
 The lib is available through [CocoaPods](https://cocoapods.org) CocoaPods can be installed using [Ruby gems](https://rubygems.org):
 
@@ -60,8 +61,11 @@ let data: [Int: [Selectable]] = [
 ```
 
 ### 3- load the Picker inside the UITextfiled and get the selected values for each component
+
+you can pass your parent view as overlayedView or you keep it null if you don't want any overlay
+
 ```
-textField.loadPicker(data: data, onSelect: { [weak self] selected in
+textField.loadPicker(data: data, overlayedView: self.view, onSelect: { [weak self] selected in
     var displayedText = ""
     
     if let selectedCat = selected[0] as? Cat {
@@ -94,6 +98,8 @@ This will allow you to update the following props and it's default values
      hideCancelButton: Bool = false
      isToolBarHidden: Bool = false
      hideWhenSelect: Bool = false
+     hideWhenTouchOverlay: Bool = false
+     overlayViewBackgroundColor: UIColor
 ```    
  for example 
 ```
@@ -116,3 +122,5 @@ Just define a new data and pass it to
  ```
 textField.updatePickerInput(with: [Int : [Selectable]])
  ```
+ 
+ 
